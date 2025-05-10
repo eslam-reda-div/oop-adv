@@ -43,14 +43,14 @@ class Destination extends Model
     }
 
     // A destination can be part of many paths as a stop
-    public function pathsAsStop(): BelongsToMany
-    {
-        return $this->belongsToMany(Path::class, 'path_stops')
-                    ->withPivot('stop_order', 'estimated_arrival_time', 'estimated_departure_time',
-                               'stop_duration', 'distance_from_previous', 'time_from_previous',
-                               'stop_notes', 'is_pickup_point', 'is_dropoff_point')
-                    ->withTimestamps();
-    }
+    // public function pathsAsStop(): BelongsToMany
+    // {
+    //     return $this->belongsToMany(Path::class, 'path_stops')
+    //                 ->withPivot('stop_order', 'estimated_arrival_time', 'estimated_departure_time',
+    //                            'stop_duration', 'distance_from_previous', 'time_from_previous',
+    //                            'stop_notes', 'is_pickup_point', 'is_dropoff_point')
+    //                 ->withTimestamps();
+    // }
 
     // A destination can be the starting point of many paths
     public function pathsAsStart()

@@ -220,7 +220,7 @@ class DestinationResource extends Resource
         return [
             \App\Filament\Resources\DestinationResource\RelationManagers\PathsAsStartRelationManager::class,
             \App\Filament\Resources\DestinationResource\RelationManagers\PathsAsEndRelationManager::class,
-            \App\Filament\Resources\DestinationResource\RelationManagers\PathsAsStopRelationManager::class,
+            // \App\Filament\Resources\DestinationResource\RelationManagers\PathsAsStopRelationManager::class,
         ];
     }
 
